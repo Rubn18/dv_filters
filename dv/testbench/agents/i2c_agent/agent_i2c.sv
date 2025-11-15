@@ -12,6 +12,9 @@ class i2c_agent extends uvm_agent;
   i2c_driver driver;
   uvm_sequencer#(i2c_basic_tr) m_sequencer;
   i2c_monitor monitor;
+  
+  // Virtual interface
+  virtual dut_if vif;
     
   function new(string name, uvm_component parent);
     super.new(name, parent);
