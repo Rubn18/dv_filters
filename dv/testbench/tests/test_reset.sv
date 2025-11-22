@@ -13,6 +13,7 @@ class test_reset extends base_test;
   endfunction
 
   task run_phase(uvm_phase phase);
+    super.run_phase(phase);
     phase.raise_objection(this);
     `uvm_info(get_name(), "** TEST RESET **", UVM_LOW)
 
@@ -33,8 +34,7 @@ class test_reset extends base_test;
 
     repeat(15) @(posedge env.dut_vif.clk);
 
-    if (env.dut_vif.cic_out_ready === 0 &&
-        env.dut_vif.fir_out_ready === 0)
+    if (env.dut_vif.cic_out_ready === 0 && env.dut_vif.fir_out_ready === 0)
       `uvm_error("PRE_RESET", "Ningun filtro responde antes del reset")
 
 
