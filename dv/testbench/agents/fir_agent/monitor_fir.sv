@@ -30,7 +30,7 @@ class fir_monitor extends uvm_monitor;
         tr.in_ready  = dut_vif.cic_out_ready;
         tr.data_out  = dut_vif.fir_data_out;
         tr.out_ready = dut_vif.fir_out_ready;
-        tr.enable    = dut_vif.enable;
+        tr.fir_enable    = dut_vif.fir_enable;
         tr.reset_n   = dut_vif.reset_n;
         tr.coef0     = dut_vif.coef0;
         tr.coef1     = dut_vif.coef1;

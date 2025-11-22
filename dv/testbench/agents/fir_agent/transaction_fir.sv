@@ -6,7 +6,7 @@ import uvm_pkg::*;
 class fir_tr extends uvm_sequence_item;
 `uvm_object_utils(fir_tr)
 
-  bit enable;
+  bit fir_enable;
   bit reset_n;
   logic signed [7:0] coef0;
   logic signed [7:0] coef1;

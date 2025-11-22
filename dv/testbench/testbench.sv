@@ -14,7 +14,7 @@ module top;
   fir #(.WIDTH(8)) dut_fir (
       .clk       (dut_if.clk),
       .reset_n   (dut_if.reset_n),
-      .enable    (dut_if.enable),
+      .enable    (dut_if.fir_enable),
 
       .in_ready  (dut_if.in_ready),
       .data_in   (dut_if.data_in),
@@ -33,7 +33,7 @@ module top;
       .resetn            (dut_if.reset_n),
       .clk               (dut_if.clk),
       .clear             (dut_if.clear),
-      .enable            (dut_if.enable),
+      .enable            (dut_if.cic_enable),
 
       .data_in           (dut_if.data_in),
       .data_in_ready     (dut_if.in_ready),
@@ -53,23 +53,26 @@ module top;
 
   initial begin
     dut_if.clk = 0;
-    forever #5 dut_if.clk = ~dut_if.clk;  // Reloj 100 MHz
+    forever #5 dut_if.clk = ~dut_if.clk;  // Reloj
   end
 
   initial begin
     dut_if.reset_n = 0;
-    dut_if.enable  = 0;
+    dut_if.cic_enable  = 0;
+    dut_if.fir_enable  = 0;
     dut_if.clear   = 0;
 
     repeat(5) @(posedge dut_if.clk);
     dut_if.reset_n = 1;
 
     repeat(3) @(posedge dut_if.clk);
-    dut_if.enable = 1;
+      dut_if.cic_enable  = 1;
+      dut_if.fir_enable  = 1;
   end
 
 
   initial begin
+    uvm_config_db#(virtual dut_if)::set(null, "", "dut_vif", dut_if);
     run_test();  // +UVM_TESTNAME=test_filtros
   end
 

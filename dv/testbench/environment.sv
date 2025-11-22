@@ -6,7 +6,7 @@ class environment extends uvm_env;
   `uvm_component_utils(environment)
   
   // Agents
-  i2c_agent i2c_agt;
+  // i2c_agent i2c_agt;
   cic_agent cic_agt;
   fir_agent fir_agt;
 
@@ -18,7 +18,7 @@ class environment extends uvm_env;
 	
   function void build_phase(uvm_phase phase);
     // Create agents
-    i2c_agt = i2c_agent::type_id::create("i2c_agt", this);
+    // i2c_agt = i2c_agent::type_id::create("i2c_agt", this);
     cic_agt = cic_agent::type_id::create("cic_agt", this);
     fir_agt = fir_agent::type_id::create("fir_agt", this);
   endfunction
@@ -29,7 +29,7 @@ class environment extends uvm_env;
       `uvm_fatal("NOVIF", "No se ha encontrado dut_vif en uvm_config_db")
 
     // Pasar virtual interface al agente
-    i2c_agt.vif = dut_vif;
+    // i2c_agt.vif = dut_vif;
     cic_agt.vif = dut_vif;
     fir_agt.vif = dut_vif;
   endfunction

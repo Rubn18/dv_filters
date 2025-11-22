@@ -30,7 +30,7 @@ class cic_monitor extends uvm_monitor;
         tr.data_in_ready  = dut_vif.data_in_ready;
         tr.data_out       = dut_vif.cic_data_out;
         tr.data_out_ready = dut_vif.cic_out_ready;
-        tr.enable         = dut_vif.enable;
+        tr.cic_enable     = dut_vif.cic_enable;
         tr.reset_n        = dut_vif.reset_n;
         tr.clear          = dut_vif.clear;
         tr.filter_dec_factor = dut_vif.filter_dec_factor;

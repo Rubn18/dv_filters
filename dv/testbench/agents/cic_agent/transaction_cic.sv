@@ -6,7 +6,7 @@ import uvm_pkg::*;
 class cic_tr extends uvm_sequence_item;
   `uvm_object_utils(cic_tr)
 
-  bit enable;
+  bit cic_enable;
   bit reset_n;
   logic signed [7:0] data_in;
   bit clear;

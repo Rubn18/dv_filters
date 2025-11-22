@@ -8,6 +8,7 @@ interface dut_if();
 
   // CIC
   logic clear;
+  logic cic_enable;
   logic data_in_ready;
 
   logic [$clog2($clog2(8+1))-1:0] filter_dec_factor;
@@ -16,7 +17,7 @@ interface dut_if();
   logic cic_out_ready;
 
   // FIR
-  logic enable;
+  logic fir_enable;
   logic in_ready;
 
   logic signed [8-1:0] fir_data_out;

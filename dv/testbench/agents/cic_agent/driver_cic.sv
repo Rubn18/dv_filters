@@ -28,7 +28,7 @@ class cic_driver extends uvm_driver #(cic_tr);
       dut_vif.data_in_ready <= tr.data_in_ready;
       dut_vif.clear         <= tr.clear;
       dut_vif.filter_dec_factor <= tr.filter_dec_factor;
-      dut_vif.enable        <= tr.enable;
+      dut_vif.cic_enable        <= tr.cic_enable;
 
       seq_item_port.item_done(); // indicar que se ha completado
       @(posedge dut_vif.clk);    // sincronización opcional

@@ -34,7 +34,7 @@ class fir_driver extends uvm_driver #(fir_tr);
       dut_vif.coef2 <= tr.coef2;
       dut_vif.div   <= tr.div;
 
-      dut_vif.enable  <= tr.enable;
+      dut_vif.fir_enable  <= tr.fir_enable;
       dut_vif.reset_n <= tr.reset_n;
 
       seq_item_port.item_done();
