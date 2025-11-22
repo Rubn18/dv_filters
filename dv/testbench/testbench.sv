@@ -16,7 +16,7 @@ module top;
       .reset_n   (dut_if.reset_n),
       .enable    (dut_if.fir_enable),
 
-      .in_ready  (dut_if.in_ready),
+      .in_ready  (dut_if.data_in_ready),
       .data_in   (dut_if.data_in),
       .data_out  (dut_if.fir_data_out),
       .out_ready (dut_if.fir_out_ready),
@@ -36,7 +36,7 @@ module top;
       .enable            (dut_if.cic_enable),
 
       .data_in           (dut_if.data_in),
-      .data_in_ready     (dut_if.in_ready),
+      .data_in_ready     (dut_if.data_in_ready),
       .filter_dec_factor (dut_if.filter_dec_factor),
 
       .data_out_ready    (dut_if.cic_out_ready),
