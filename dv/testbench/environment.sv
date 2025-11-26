@@ -1,6 +1,8 @@
 `include "agent_i2c.sv"
 `include "agent_cic.sv"
 `include "agent_fir.sv"
+`include "cic_scoreboard.sv"
+`include "fir_scoreboard.sv"
 
 class environment extends uvm_env;  
   `uvm_component_utils(environment)
@@ -9,6 +11,8 @@ class environment extends uvm_env;
   // i2c_agent i2c_agt;
   cic_agent cic_agt;
   fir_agent fir_agt;
+  cic_scoreboard cic_sb;
+  fir_scoreboard fir_sb;
 
   virtual dut_if dut_vif;
   
@@ -32,5 +36,7 @@ class environment extends uvm_env;
     // i2c_agt.vif = dut_vif;
     cic_agt.vif = dut_vif;
     fir_agt.vif = dut_vif;
+    cic_agt.monitor.port.connect(cic_sb.analysis_port);
+    fir_agt.monitor.port.connect(fir_sb.analysis_port);
   endfunction
 endclass : environment
