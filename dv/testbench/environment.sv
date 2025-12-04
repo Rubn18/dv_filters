@@ -25,6 +25,8 @@ class environment extends uvm_env;
     // i2c_agt = i2c_agent::type_id::create("i2c_agt", this);
     cic_agt = cic_agent::type_id::create("cic_agt", this);
     fir_agt = fir_agent::type_id::create("fir_agt", this);
+    cic_sb = cic_scoreboard::type_id::create("cic_sb", this);
+    fir_sb = fir_scoreboard::type_id::create("fir_sb", this);
   endfunction
 
   function void connect_phase(uvm_phase phase);

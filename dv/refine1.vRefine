@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<refinement-file-root>
+  <information comment-version="2" creation-time="Thu 04 Dec 2025 18:38:02 CET" creator="mue08" csCheck="false" modified-by="mue08" modify-time="Thu 04 Dec 2025 20:07:39 CET" save-ref-method="seq" tool-version="Cadence Verisium Manager23.03" rules-signature-c="d134aa2f72d728fcd8c98b741ce37e">
+    <ucm-files>
+      <ucm-file domain="icc" modelCheckSum="22845231" path="icc_015c972f_4d146ced.ucm(merged)"></ucm-file>
+    </ucm-files>
+    <ccf-files></ccf-files>
+  </information>
+  <rules>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/data_in_ready" entityType="toggle" excTime="1764875185" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/sclk" entityType="toggle" excTime="1764872833" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/sdata" entityType="toggle" excTime="1764872833" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/sda_drive" entityType="toggle" excTime="1764872833" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/scl_drive" entityType="toggle" excTime="1764872833" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/sda_val" entityType="toggle" excTime="1764872833" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/scl_val" entityType="toggle" excTime="1764872833" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_cic/data_in_ready" entityType="toggle" excTime="1764872952" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="top/dut_if/in_ready" entityType="toggle" excTime="1764872998" name="exclude" reviewer="1" user="0" vscope="default"></rule>
+  </rules>
+  <cache-map>
+    <cache-entry key="0" value="mue08"></cache-entry>
+    <cache-entry key="1" value="unknown"></cache-entry>
+  </cache-map>
+</refinement-file-root>

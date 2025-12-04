@@ -25,7 +25,7 @@ module cic #(
 	input enable,
 	
 	// Data Input
-    input [INPUT_WIDTH-1:0] data_in,
+    input signed [INPUT_WIDTH-1:0] data_in,
 	input data_in_ready,
 	input [$clog2($clog2(MAX_DEC_RATE+1))-1:0] filter_dec_factor,
 	

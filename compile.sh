@@ -81,7 +81,7 @@ END
 command="xrun  "
 command+="dv/testbench/testbench.sv rtl/digital_top.sv -f rtl/dut.f -sv -sysv "
 command+="-64bit -dynamic -turbo  "
-command+="-incdir . -incdir ./dv/testbench/ -incdir ./dv/testbench/tests/ -incdir ./dv/testbench/sequencer/ -incdir ./dv/testbench/scoreboard/ -incdir ./dv/testbench/agents/i2c_agent/ -incdir ./dv/testbench/agents/cic_agent/ -incdir ./dv/testbench/agents/fir_agent/ -incdir ./dv/testbench/agents/clock_agent/ -incdir ./dv/testbench/models/ -incdir ./rtl/"
+command+="-incdir . -incdir ./dv/testbench/tests/ -incdir ./dv/testbench/ -incdir ./dv/testbench/sequencer/ -incdir ./dv/testbench/scoreboard/ -incdir ./dv/testbench/agents/i2c_agent/ -incdir ./dv/testbench/agents/cic_agent/ -incdir ./dv/testbench/agents/fir_agent/ -incdir ./dv/testbench/agents/clock_agent/ -incdir ./dv/testbench/models/ -incdir ./rtl/"
 command+="+overwrite -access +rw  "
 command+="-run  "
 command+="-stats -status  -licqueue "
@@ -107,7 +107,7 @@ while getopts dcrs:h option; do
             [ $debug -eq 1 ] && echo "option c"
             coverage=1
             command+=" -coverage all -cov_cgsample -covoverwrite "
-            ommand_regr_ini+=" -coverage all -cov_cgsample -covoverwrite "
+            command_regr_ini+=" -coverage all -cov_cgsample -covoverwrite "
             ;;
         r) # regression
             #compile only (for regressions)

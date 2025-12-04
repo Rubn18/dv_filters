@@ -40,6 +40,9 @@ module top;
       .coef2     (dut_if.coef2),
       .div       (dut_if.div)
   );
+  property clear_then_data_out_zero;
+      @(posedge dut_if.clk) dut_if.clear == 1 |-> ##1 (dut_if.cic_data_out == 0); // Cuando clear es 1, en el siguiente ciclo (##1), data_out debe ser 0
+  endproperty
 
   initial begin
     $dumpfile("dump.vcd");
@@ -73,5 +76,7 @@ module top;
     uvm_config_db#(virtual dut_if)::set(null, "", "dut_vif", dut_if);
     run_test();  // +UVM_TESTNAME=test_filtros
   end
+
+  clear_chk: assert property (clear_then_data_out_zero);
 
 endmodule : top

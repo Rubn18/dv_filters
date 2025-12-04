@@ -7,3 +7,9 @@
 `include "test_reset.sv"
 
 `include "test_enable.sv"
+
+`include "test_io_check.sv"
+
+`include "test_io_coeffs.sv"
+
+`include "test_clear.sv"

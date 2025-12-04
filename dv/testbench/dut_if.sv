@@ -28,7 +28,7 @@ interface dut_if();
   logic signed [7:0] coef2;
 
   logic signed [7:0] div;
-
+  
   // i2c
   //following signals only for system-level verification. You can remove them for block-level
   tri1 sclk;

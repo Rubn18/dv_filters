@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vplanx:plan xmlns:vplanx="http://www.cadence.com/vplanx">
+    <metaData id="70106518-11b9-4715-b5ed-00b906df5608">
+        <name>Prac2</name>
+        <attributes>
+            <attribute>
+                <name>owner</name>
+                <value>mue02</value>
+            </attribute>
+            <attribute>
+                <name>creator</name>
+                <value>mue02</value>
+            </attribute>
+            <attribute>
+                <name>path_usage</name>
+                <value>RELATIVE_TO_VPLAN</value>
+            </attribute>
+        </attributes>
+        <planId>70106518-11b9-4715-b5ed-00b906df5608</planId>
+        <sourceTool>vManager Planner</sourceTool>
+        <toolVersion>23.03</toolVersion>
+        <schemaVersion>1.0</schemaVersion>
+        <buildTime>2023-08-01 14:13:30</buildTime>
+    </metaData>
+    <rootElements>
+        <section id="8862c3b9-f41b-477a-9b6f-09bd67f7820d">
+            <name>Testcases</name>
+            <attributes>
+                <attribute>
+                    <name>creator</name>
+                    <value>mue02</value>
+                </attribute>
+            </attributes>
+            <subElements>
+                <metricsPort id="1e2e4a6b-725f-4602-befd-1673d2e947cf">
+                    <name>T_RESET</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>TESTCASE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>poner reset a 0 (rst_n = 0)</value>
+                        </attribute>
+                        <attribute>
+                            <name>implementation_note</name>
+                            <value>1. power up
+2. Reset
+3. Check is alive
+4. Reapeat from #2 a radom number of timer</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="bcaace79-cf7f-4e56-85cd-4654707d2411">
+                    <name>T_CIC_FIR_EN</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>TESTCASE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Conectar clk. Poner cic_en = 0 y fir_en = 0. Luego cic_en = 1 y fir_en = 0. Después cic_en = 0 y fir_en = 1. Por último cic_en = 1 y fir_en = 1</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="9b42e7ab-d4ff-4cb6-a88a-4357615310c5">
+                    <name>T_CIC_COEF</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>TESTCASE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Conectar clk. Poner cic_coef a diferentes valores. Aplicar una rampa a la entrada. </value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="381fd40c-cc10-43d5-b7b8-8e0fe88ae4f1">
+                    <name>T_CIC_CLR</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>TESTCASE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Conectar clk. Aplicar rampa a la entrada y a mitad del proceso cic_clr = 1</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="8e81bac3-531d-4c65-b727-86dcafa13f96">
+                    <name>T_FIR_LP</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>TESTCASE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Conectar clk. Poner coeficientes a diferentes valores y aplicar señal escalón</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="24231b58-9d11-44e1-bbca-e20589259562">
+                    <name>T_CORNERS</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>TESTCASE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Aplicar datos de entrada 0x7F y 0x80 (máximos y mínimos)</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+            </subElements>
+        </section>
+        <section id="be776e3e-5fd5-475a-9b2b-9b842699d919">
+            <name>Checkers</name>
+            <attributes>
+                <attribute>
+                    <name>creator</name>
+                    <value>mue02</value>
+                </attribute>
+            </attributes>
+            <subElements>
+                <metricsPort id="807355af-98b6-4f77-843f-68c91180b357">
+                    <name>CHK_RESET</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>CHECK</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Ver que todas las salidas y registros se han inicializado correctamente</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="81409ca9-f033-4111-835b-79f897b9f8ad">
+                    <name>CHK_CIC_FIR_EN</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>CHECK</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Si cic_en=0, el CIC no debe alterar los datos. Si fir_en=0, la salida FIR no debe alterar la entrada</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="bba7b3ff-b2e1-493a-b730-1c77ff307d8e">
+                    <name>CHK_CIC_COEF</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>CHECK</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Verifica que la salida del CIC produce 1 muestra de cada M entradas según CIC_COEF</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="8148f899-9ec4-4885-945e-0f1316f88d9c">
+                    <name>CHK_CIC_CLR</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>CHECK</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Asegurase que cic_clr pone a cero las salidas del filtro</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="0715bf0c-2581-43c6-937f-d2e9ecb4014e">
+                    <name>CHK_FIR_OUTPUT</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>CHECK</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Calcula la salida esperada y compara con data_filtered </value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="b91bf862-3285-4ad5-a28e-915071ba4759">
+                    <name>CHK_SATURATION</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>CHECK</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Verifica que no se produce overflow fuera del rango de 8 bits signed (-128 a 127)</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+            </subElements>
+        </section>
+        <section id="19c13c38-eecd-442d-95af-85f51bf4b5c5">
+            <name>Covergroups</name>
+            <attributes>
+                <attribute>
+                    <name>creator</name>
+                    <value>mue02</value>
+                </attribute>
+            </attributes>
+            <subElements>
+                <metricsPort id="2c47f0bb-a46b-4bff-837c-f4762003e256">
+                    <name>CG_CIC_COEF</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>COVERAGE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Cubrir valores de decimación típicos</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="e097b459-2a5d-4263-9bf8-9868ec44dd85">
+                    <name>CG_ENABLE</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>COVERAGE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Cubrir que se han cubierto todas las posibles combinaciones de entrada de cic_en y fir_en</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="742a0c28-668e-4a34-90b6-a828dc8f8049">
+                    <name>CG_SAT</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>COVERAGE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Cubrir todo el rango de entrada posible de 8 bits con signo -128 a +127</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+                <metricsPort id="68d0ab8c-8e01-499c-a62f-36aa38efced9">
+                    <name>CG_FIR_COEFF</name>
+                    <attributes>
+                        <attribute>
+                            <name>metrics_port_kind</name>
+                            <value>COVERAGE</value>
+                        </attribute>
+                        <attribute>
+                            <name>creator</name>
+                            <value>mue02</value>
+                        </attribute>
+                        <attribute>
+                            <name>details</name>
+                            <value>Cubir rango habitual coeficientes de filtro FIR</value>
+                        </attribute>
+                    </attributes>
+                    <assumePlanned>false</assumePlanned>
+                </metricsPort>
+            </subElements>
+        </section>
+    </rootElements>
+</vplanx:plan>
